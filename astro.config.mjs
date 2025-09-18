@@ -10,8 +10,8 @@ export default defineConfig({
   site: 'https://dipankarjana.com',
   integrations: [mdx(), sitemap()],
   image: {
-		service: passthroughImageService()
-	},
+    service: passthroughImageService()
+  },
   vite: {
     plugins: [tailwindcss()]
   }
