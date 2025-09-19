@@ -3,6 +3,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const d1: number = new Date('05/01/2017').getTime()
+const d2: number = new Date().getTime()
+const diffTime = Math.abs(d2 - d1)
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) / 365
+const experience = diffDays.toFixed(1)
 ---
 
 <!doctype html>
@@ -13,8 +19,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   <body>
     <Header />
     <main>
-      <h1 class="font-semibold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
-      <p>Detail-oriented Frontend Engineer with 8.4 years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
+      <h1 class="font-bold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
+      <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
       <p>Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
       <p>Here are a few ideas on how to get started with the template:</p>
       <ul>
