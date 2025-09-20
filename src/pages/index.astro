@@ -21,14 +21,24 @@ const experience = diffDays.toFixed(1)
   </head>
   <body>
     <Header />
+    <section class="intro max-w-5xl">
+      <h1>Hey, I'm <mark>Dipankar Jana</mark></h1>
+      <p>Senior Software Engineer</p>
+    </section>
     <main>
-      <h1 class="font-bold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
       <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
       <p>Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
       <section class="mt-4">
         <h3 class="font-bold">Experience</h3>
         <p>Being a self-taught developer, I've learned whatever was necessary to advance throughout my career. Here is my recent past:</p>
-        <Job heading='Senior Software Engineer' icon={okcreditLogo} />
+        <Job icon={okcreditLogo}>
+          <Fragment slot="header">Senior Frontend Engineer</Fragment>
+          <Fragment slot="date">Since September 2018</Fragment>
+          <Fragment slot="content">
+            <p>Led a team of engineers in the development and designers of new and upcoming products.</p>
+            <p><strong>Most important thing I've learned here:</strong> how to lead a team, mentor individuals for growth and work on a complex company-wide design system.</p>
+          </Fragment>
+        </Job>
       </section>
       <p>
         Looking for a blog template with a bit more personality? Check out
@@ -39,3 +49,45 @@ const experience = diffDays.toFixed(1)
     <Footer />
   </body>
 </html>
+
+<style>
+  .intro {
+    background: #2A3333;
+    border-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    padding: 4rem;
+    margin: 2rem auto 0.5rem auto;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 3.75rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.875rem;
+      line-height: 2.625rem;
+      margin-bottom: 0;
+    }
+
+    mark {
+      background: #A83786;
+      border-radius: 8px;
+      padding: 0 0.5rem;
+      color: white;
+    }
+  }
+
+  main {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 5rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+  }
+</style>

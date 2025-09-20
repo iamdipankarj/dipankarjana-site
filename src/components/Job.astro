@@ -5,19 +5,17 @@ import { Image } from 'astro:assets';
 
 interface Props extends HTMLAttributes<'div'> {
   icon: ImageMetadata;
-  heading: string
 }
 
-const { heading, icon, ...props } = Astro.props;
+const { icon, ...props } = Astro.props;
 ---
 
 <div class="flex gap-2 my-2" {...props}>
   <div class="icon"><Image width={180} height={180} src={icon} alt="" /></div>
   
   <div>
-    <h3 class="font-semibold">{heading}</h3>
-    <small class="block text-lg my-0.5 opacity-70">Since September 2018</small>
-    <p>Led a team of engineers in the development and designers of new and upcoming products.</p>
-    <p><strong>Most important thing I've learned here:</strong> how to lead a team, mentor individuals for growth and work on a complex company-wide design system.</p>
+    <h3 class="font-semibold"><slot name="header" /></h3>
+    <small class="block text-lg my-0.5 opacity-70"><slot name="date" /></small>
+    <slot name="content" />
   </div>
 </div>
