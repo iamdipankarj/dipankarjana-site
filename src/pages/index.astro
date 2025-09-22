@@ -1,71 +1,27 @@
 ---
-import Job from '@/components/Job.astro';
-import BaseHead from '@/components/BaseHead.astro';
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
-import okcreditLogo from '@/assets/okcredit.svg';
-
-const d1: number = new Date('05/01/2017').getTime()
-const d2: number = new Date().getTime()
-const diffTime = Math.abs(d2 - d1)
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) / 365
-const experience = diffDays.toFixed(1)
-
+import Banner from '@/components/Banner.astro';
+import Layout from '@/layouts/Layout.astro';
+import Intro from '@/components/Intro.astro';
+import Experience from '@/components/Experience.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <section class="max-w-5xl bg-[#2A3333] text-white rounded-3xl rounded-bl-2xl rounded-br-2xl p-3.5 mt-2 mb-2 mx-auto">
-      <h1 class="text-5xl font-bold leading-5">Hey, I'm <mark class="bg-[#A83786] text-white rounded-lg px-0.5">Dipankar Jana</mark></h1>
-      <p class="text-2xl !m-0">Senior Software Engineer</p>
-    </section>
-    <main class="bg-white border border-black/10 rounded-lg mb-2">
-      <section class="p-4 [&>p]:last:mb-0 [&>p]:mb-2">
-        <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
-        <p class="text-lg leading-2.5 text-slate-700">Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
-      </section>
-      <section class="grid grid-cols-4 gap-[0.2rem] text-stats-foreground">
-        <div class="bg-stats p-3 text-center">
-          <h4 class="text-4xl font-bold m-0 text-slate-900">39</h4>
-          <p class="text-lg m-0">years old, born in&nbsp;1985</p>
-        </div>
-        <div class="bg-stats p-3 text-center">
-          <h4 class="text-4xl font-bold m-0 text-slate-900">2</h4>
-          <p class="text-lg m-0">years since moving to&nbsp;Germany</p>
-        </div>
-        <div class="bg-stats p-3 text-center">
-          <h4 class="text-4xl font-bold m-0 text-slate-900">8 + 2</h4>
-          <p class="text-lg m-0">ages of my daughters, Aliz&nbsp;&amp;&nbsp;Adel</p>
-        </div>
-        <div class="bg-stats p-3 text-center">
-          <h4 class="text-4xl font-bold m-0 text-slate-900">13</h4>
-          <p class="text-lg m-0">LEGO sets I bought last&nbsp;year</p>
-        </div>
-      </section>
-      <section class="mt-4">
-        <h3 class="font-bold">Experience</h3>
-        <p>Being a self-taught developer, I've learned whatever was necessary to advance throughout my career. Here is my recent past:</p>
-        <Job icon={okcreditLogo}>
-          <Fragment slot="header">Senior Frontend Engineer</Fragment>
-          <Fragment slot="date">Since September 2018</Fragment>
-          <Fragment slot="content">
-            <p>Led a team of engineers in the development and designers of new and upcoming products.</p>
-            <p><strong>Most important thing I've learned here:</strong> how to lead a team, mentor individuals for growth and work on a complex company-wide design system.</p>
-          </Fragment>
-        </Job>
-      </section>
-      <p>
-        Looking for a blog template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <main>
+    <Banner />
+    <article>
+      <Intro />
+      <Experience />
+    </article>
+  </main>
+</Layout>
+
+<style>
+  article {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2rem;
+  }
+</style>
