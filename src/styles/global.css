@@ -21,6 +21,11 @@
   }
 }
 
+@theme {
+  --color-stats: #F6F5EB;
+  --color-stats-foreground: #616052;
+}
+
 @font-face {
   font-family: "Paytone One";
   src: url("/fonts/paytoneone-regular.woff") format("woff");
@@ -100,7 +105,7 @@ body {
 }
 
 main {
-  @apply max-w-5xl mx-auto py-5 px-2;
+  @apply max-w-5xl mx-auto;
 }
 
 strong,
@@ -112,9 +117,6 @@ a {
 }
 a:hover {
   color: var(--accent);
-}
-p {
-  margin-bottom: 1em;
 }
 .prose p {
   margin-bottom: 2em;
