@@ -1,0 +1,43 @@
+---
+const age = new Date().getFullYear() - 1994;
+---
+
+<section class="grid grid-cols-4 text-center">
+  <div>
+    <h4>{age}</h4>
+    <p>years old, born in 1994</p>
+  </div>
+  <div>
+    <h4>English</h4>
+    <p>Full Professional Proficiency</p>
+  </div>
+  <div>
+    <h4>Hindi</h4>
+    <p>Native or Bilingual Proficiency</p>
+  </div>
+  <div>
+    <h4>Bengali</h4>
+    <p>Native or Bilingual Proficiency</p>
+  </div>
+</section>
+
+<style>
+  @reference "@/styles/global.css";
+
+  section {
+    @apply gap-[0.2rem];
+  }
+
+  div {
+    background: #F6F5EB;
+    color: #616052;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    color: #111111;
+    font-size: 2rem;
+    padding-bottom: 0.8rem;
+  }
+</style>
