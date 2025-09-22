@@ -1,0 +1,219 @@
+---
+import Card from "@/components/Card.astro";
+
+const skills = [
+  {
+    name: "JavaScript",
+    image: '/skills/javascript.svg',
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    image: '/skills/typescript.svg',
+  },
+  {
+    name: "React.js",
+    href: "https://react.dev/",
+    image: '/skills/react.svg',
+  },
+  {
+    name: "React Native",
+    href: "https://reactnative.dev/",
+    image: '/skills/react-native.svg',
+  },
+  {
+    name: "Vue.js",
+    href: "https://vuejs.org/",
+    image: '/skills/vue.svg',
+  },
+  {
+    name: "Next.js",
+    href: "https://nextjs.org/",
+    image: '/skills/next.svg',
+  },
+  {
+    name: "Astro",
+    href: "https://astro.build/",
+    image: '/skills/astro.svg',
+  },
+  {
+    name: "Vite",
+    href: "https://vite.dev/",
+    image: '/skills/vite.svg',
+  },
+  {
+    name: "Redux Toolkit",
+    href: "https://redux.js.org/",
+    image: '/skills/redux.svg',
+  },
+  {
+    name: 'React Hook Form',
+    href: 'https://react-hook-form.com/',
+    image: '/skills/react.svg',
+  },
+  {
+    name: 'Zod',
+    href: 'https://zod.dev/',
+    image: '/skills/zod.webp',
+  },
+  {
+    name: 'Webpack',
+    href: 'https://webpack.js.org/',
+    image: '/skills/webpack.svg',
+  },
+  {
+    name: 'Rollup.js',
+    href: 'https://rollupjs.org/',
+    image: '/skills/rollup.svg',
+  },
+  {
+    name: 'React Query',
+    href: 'https://tanstack.com/query/latest',
+    image: '/skills/tanstack.png',
+  },
+  {
+    name: 'React Router',
+    href: 'https://reactrouter.com/',
+    image: '/skills/react-router.svg',
+  },
+  {
+    name: 'Zustand',
+    href: 'https://zustand.docs.pmnd.rs/getting-started/introduction',
+    image: '/skills/zustand.png',
+  },
+  {
+    name: 'Jotai',
+    href: 'https://jotai.org/',
+    image: '/skills/jotai.png',
+  },
+  {
+    name: 'Jest',
+    href: 'https://jestjs.io/',
+    image: '/skills/jest.svg',
+  },
+  {
+    name: 'Vitest',
+    href: 'https://vitest.dev/',
+    image: '/skills/vitest.svg',
+  },
+  {
+    name: 'Cypress',
+    href: 'https://www.cypress.io/',
+    image: '/skills/cypress.svg',
+  },
+  {
+    name: 'Playwright',
+    href: 'https://playwright.dev/',
+    image: '/skills/playwright.svg',
+  },
+  {
+    name: 'React Testing Library',
+    href: 'https://testing-library.com/docs/react-testing-library/intro/',
+    image: '/skills/rtl.png',
+  },
+  {
+    name: 'HTML5',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+    image: '/skills/html5.svg',
+  },
+  {
+    name: 'CSS3',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    image: '/skills/css3.svg',
+  },
+  {
+    name: 'PostCSS',
+    href: 'https://postcss.org/',
+    image: '/skills/postcss.svg',
+  },
+  {
+    name: 'Tailwind CSS',
+    href: 'https://tailwindcss.com/',
+    image: '/skills/tailwind.svg',
+  },
+  {
+    name: 'Sass',
+    href: 'https://sass-lang.com/',
+    image: '/skills/sass.svg',
+  },
+  {
+    name: 'Styled Components',
+    href: 'https://styled-components.com/',
+    image: '/skills/styled-components.svg',
+  },
+  {
+    name: 'shadcn/ui',
+    href: 'https://ui.shadcn.com/',
+    image: '/skills/shadcn.png',
+  },
+  {
+    name: 'BootStrap',
+    href: 'https://getbootstrap.com/',
+    image: '/skills/bootstrap.svg',
+  },
+  {
+    name: 'Material UI',
+    href: 'https://mui.com/',
+    image: '/skills/mui.svg',
+  },
+  {
+    name: 'Chakra UI',
+    href: 'https://chakra-ui.com/',
+    image: '/skills/chakraui.svg',
+  },
+  {
+    name: 'WordPress Development',
+    href: 'https://developer.wordpress.org/',
+    image: '/skills/wordpress.svg',
+  },
+  {
+    name: 'jQuery',
+    href: 'https://jquery.com/',
+    image: '/skills/jquery.svg',
+  },
+  {
+    name: 'ECMAScript 6',
+    href: 'https://www.ecma-international.org/ecma-262/6.0/',
+    image: '/skills/es6.svg',
+  },
+  {
+    name: 'Inertia.js',
+    href: 'https://inertiajs.com/',
+    image: '/skills/inertia.png',
+  },
+  {
+    name: 'Laravel 11.x',
+    href: 'https://laravel.com',
+    image: '/skills/laravel.svg',
+  },
+  {
+    name: 'React Context API',
+    href: 'https://react.dev/reference/react/Context',
+    image: '/skills/react.svg',
+  },
+  {
+    name: 'Canvas API',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API',
+    image: '/skills/canvas.svg',
+  },
+  {
+    name: 'Supabase',
+    href: 'https://supabase.com/',
+    image: '/skills/supabase.png',
+  }
+]
+---
+
+<section class="grid-container">
+  <h2 class="heading">Skills I Possess</h2>
+  <p>The things that I have learned over the years include a variety of web development technologies and frameworks.</p>
+  
+  <div class="skills-grid">
+    {skills.map(skill => (
+      <Card icon={skill.image} href={skill.href}>
+        <Fragment slot="content">{skill.name}</Fragment>
+      </Card>
+    ))}
+  </div>
+</section>

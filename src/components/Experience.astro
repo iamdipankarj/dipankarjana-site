@@ -48,7 +48,10 @@ import healofyLogo from '@/assets/healofy.svg';
   .job {
     display: flex;
     gap: 2rem;
-    margin: 3rem 0;
+    
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+    }
     
     & > div p:not(:last-of-type) {
       margin-bottom: 1.5rem;
@@ -56,8 +59,7 @@ import healofyLogo from '@/assets/healofy.svg';
   }
 
   section {
-    padding: 3rem;
-    padding-top: 0;
+    padding: 0 3rem;
   }
 
   small {

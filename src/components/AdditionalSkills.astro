@@ -1,0 +1,49 @@
+---
+import Card from "@/components/Card.astro";
+
+const skills = [
+  {
+    name: "Git",
+    image: '/skills/git.svg',
+    href: "https://git-scm.com/",
+  },
+  {
+    name: "Figma",
+    href: "https://figma.com/",
+    image: '/skills/figma.svg',
+  },
+  {
+    name: "Blender",
+    href: "https://www.blender.org/",
+    image: '/skills/blender.svg',
+  },
+  {
+    name: "Unity 3D",
+    href: "https://unity.com/",
+    image: '/skills/unity.svg',
+  },
+  {
+    name: "Adobe Photoshop",
+    href: "https://www.adobe.com/products/photoshop.html",
+    image: '/skills/photoshop.svg',
+  },
+  {
+    name: "DaVinci Resolve",
+    href: "https://www.blackmagicdesign.com/products/davinciresolve/",
+    image: '/skills/davinci.png',
+  }
+]
+---
+
+<section class="grid-container">
+  <h2 class="heading">Additional Skills</h2>
+  <p>Some other tools I use in my leisure time.</p>
+  
+  <div class="skills-grid">
+    {skills.map(skill => (
+      <Card icon={skill.image} href={skill.href}>
+        <Fragment slot="content">{skill.name}</Fragment>
+      </Card>
+    ))}
+  </div>
+</section>
