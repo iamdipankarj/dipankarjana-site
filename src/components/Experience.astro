@@ -1,0 +1,76 @@
+---
+import okcreditLogo from '@/assets/okcredit.svg';
+import clearfundsLogo from '@/assets/clearfunds.svg';
+import healofyLogo from '@/assets/healofy.svg';
+---
+
+<section class="cv">
+  <h2 class="heading section-header">What Have I done?</h2>
+  <p class="section-description">Being a self-taught developer, I've learned whatever was necessary to advance throughout my career and make a living.
+  
+  <div class="job">
+    <img src={okcreditLogo.src} alt="OkCredit">
+    <div>
+      <h3 class="heading">Design Lead at Deutsche Telekom</h3>
+      <small>Since September 2018</small>
+      <p>Currently leading a team of 20, working on our self-care mobile and web applications, used by over 20+ million users monthly.</p>
+      <p><strong>Most important thing I've learned here:</strong> how to lead a team, mentor individuals for growth and work on a complex company-wide design system.</p>
+    </div>
+  </div>
+
+  <div class="job">
+    <img src={healofyLogo.src} alt="Healofy">
+    <div>
+      <h3 class="heading">Visual Designer at IBM</h3>
+      <small>September 2016 - September 2018</small>
+      <p>IBM Budapest Lab focuses on live-streaming video products for businesses. I worked on UX/UI designs for websites and native apps for Windows and Mac.</p>
+      <p><strong>Most important thing I've learned here:</strong> how to work with the constraints of an existing platform that is already used by hundreds of thousands of users.</p>
+    </div>
+  </div>
+  
+  <div class="job">
+    <img src={clearfundsLogo.src} alt="Clearfunds">
+    <div>
+      <h3 class="heading">Instructor &amp; mentor at UI Academy</h3>
+      <small>Since May 2019</small>
+      <p>In the last years I've had the opportunity to teach UI design at various courses. At UI Academy I focus on design basics and UI design animation principles. In-between my classes I mentor students in every semester. My presentations are usually rated the highest among the participants.</p>
+      <p><strong>Most important thing I've learned here:</strong> how to engage with an audience and use cool presentation techniques to effectively communicate complex topics simply.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+
+  .job {
+    display: flex;
+    gap: 2rem;
+    
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+    }
+    
+    & > div p:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  section {
+    padding: 0 3rem;
+  }
+
+  small {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    opacity: 0.7;
+  }
+
+  h3 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+</style>
