@@ -62,7 +62,9 @@ import Education from '@/components/Education.astro';
           position="Senior Software Engineer - OkCredit"
           duration="January 2021 — Present"
         >
-          <p class="mb-4">Led a team of engineers in the development and designers of new and upcoming products.</p>
+          <Fragment slot='excerpt'>
+            <p class="mt-4">Led a team of engineers in the development and designers of new and upcoming products.</p>
+          </Fragment>
           <Milestone>Built the end-to-end frontend for the Loan platform, enabling <strong>$50 Million+</strong> in disbursal at scale.</Milestone>
           <Milestone>Led the migration of legacy codebases to modern frameworks like React, while leveraging <strong>HTML5</strong> and <strong>CSS3</strong> for improved performance and maintainability.</Milestone>
           <Milestone>Built several platform-related tools, such as an in-house component library and other utility libraries for <strong>React</strong> and <strong>React-Native</strong>.</Milestone>
@@ -78,7 +80,9 @@ import Education from '@/components/Education.astro';
           position="Software Developer - Healofy"
           duration="June 2018 — January 2021"
         >
-          <p class="mb-4">The core application stack uses Google Cloud Platform for the backend and <strong>React.js</strong>, <strong>Next.js</strong> for the frontend.</p>
+          <Fragment slot='excerpt'>
+            <p class="mt-4">The core application stack uses Google Cloud Platform for the backend and <strong>React.js</strong>, <strong>Next.js</strong> for the frontend.</p>
+          </Fragment>
           <Milestone>Used modern technologies such as SASS, ES6, and Webpack.</Milestone>
           <Milestone>Increased operational efficiency by 25% by developing several internal tools and dashboards for the operations team.</Milestone>
           <Milestone>Optimized the legacy webpages to reduce the <strong>page load time by 60%</strong>, enhancing user retention.</Milestone>
@@ -90,7 +94,9 @@ import Education from '@/components/Education.astro';
           position="Front End Developer - Clearfunds"
           duration="May 2017 — May 2018"
         >
-          <p class="mb-4">Clearfunds was an online platform for buying and selling mutual funds.</p>
+          <Fragment slot='excerpt'>
+            <p class="mt-4">Clearfunds was an online platform for buying and selling mutual funds.</p>
+          </Fragment>
           <Milestone>Increased investor fund allocation efficiency by 30% using Vue.js for Fund Finder's user-friendly frontend.</Milestone>
           <Milestone>Enhanced backend efficiency by 40% through collaborating on Ruby on Rails integrations.</Milestone>
           <Milestone><strong>Investor Dashboard</strong> - Created a dashboard that is used by investors, development required the use of <strong>Vue.js</strong> and <strong>Vue-Router</strong>.</Milestone>
