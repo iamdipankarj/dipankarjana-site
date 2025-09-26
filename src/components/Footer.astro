@@ -35,12 +35,14 @@ const today = new Date();
     justify-content: center;
     gap: 1em;
     margin-top: 1em;
-  }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--color-gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--color-gray-dark));
+
+    a {
+      text-decoration: none;
+      color: rgb(var(--color-gray));
+
+      &:hover {
+        color: rgb(var(--color-gray-dark));
+      }
+    }
   }
 </style>
