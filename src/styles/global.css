@@ -82,7 +82,7 @@ body {
 }
 
 main {
-  @apply max-w-6xl mx-auto py-10 px-2;
+  @apply max-w-6xl mx-auto py-10 px-4 md:px-2;
 }
 
 .milestone {
@@ -92,10 +92,7 @@ main {
     @apply absolute w-1.5 h-1.5 bg-[#C4C4C4] rounded-full top-1/2 transform -translate-y-1/2 left-5;
   }
 }
-/* 
-a, a:hover {
-  color: var(--color-primary);
-} */
+
 .prose p {
   margin-bottom: 2em;
 }
