@@ -16,48 +16,48 @@
   --shadow-base: 0 2px 6px rgba(96, 115, 159, 0.25), 0 8px 24px rgba(96, 115, 159, 0.33), 0 16px 32px rgba(96, 115, 159, 0.33);
   
   /* Theme colors */
-  --color-subheading: '#504E4E';
-  --color-social: '#79819A';
-  --color-socialtext: '#47516B';
-  --color-socialicon: '#E2E6EE';
-  --color-footertext: '#21243D';
+  --color-subheading: #504E4E;
+  --color-social: #79819A;
+  --color-socialText: #47516B;
+  --color-socialIcon: #E2E6EE;
+  --color-footerText: #21243D;
 
   /* Badges */
-  --color-lightBlue: '#F0FAFF';
-  --color-lightBlueText: '#0075AD';
-  --color-lightBlueStroke: '#ADE4FF';
+  --color-lightBlue: #F0FAFF;
+  --color-lightBlueText: #0075AD;
+  --color-lightBlueStroke: #ADE4FF;
 
-  --color-lightGreen: '#EEFBF4';
-  --color-lightGreenText: "#17663A";
-  --color-lightGreenStroke: '#B2EECC';
+  --color-lightGreen: #EEFBF4;
+  --color-lightGreenText: #17663A;
+  --color-lightGreenStroke: #B2EECC;
 
-  --color-lightRed: '#FEF0F4';
-  --color-lightRedText: '#D50B3E';
-  --color-lightRedStroke: '#D50B3E';
+  --color-lightRed: #FEF0F4;
+  --color-lightRedText: #D50B3E;
+  --color-lightRedStroke: #D50B3E;
 
-  --color-lightGray: '#F7F7F8';
-  --color-lightGrayText: '#3F3F50';
-  --color-lightGrayStroke: '#8A8AA3';
+  --color-lightGray: #F7F7F8;
+  --color-lightGrayText: #3F3F50;
+  --color-lightGrayStroke: #8A8AA3;
 
-  --color-lightYellow: '#FFF9EB';
-  --color-lightYellowText: '#8A6100';
-  --color-lightYellowStroke: '#C28800';
+  --color-lightYellow: #FFF9EB;
+  --color-lightYellowText: #8A6100;
+  --color-lightYellowStroke: #C28800;
 
-  --color-lightOrange: '#FFF2EE';
-  --color-lightOrangeText: '#B82E00';
-  --color-lightOrangeStroke: '#EB3A00';
+  --color-lightOrange: #FFF2EE;
+  --color-lightOrangeText: #B82E00;
+  --color-lightOrangeStroke: #EB3A00;
 
-  --color-lightPurple: '#F4F1FD';
-  --color-lightPurpleText: '#4316CA';
-  --color-lightPurpleStroke: '#7047EB';
+  --color-lightPurple: #F4F1FD;
+  --color-lightPurpleText: #4316CA;
+  --color-lightPurpleStroke: #7047EB;
 
-  --color-lightPink: '#FEECFB';
-  --color-lightPinkText: '#A5088C';
-  --color-lightPinkStroke: '#A5088C';
+  --color-lightPink: #FEECFB;
+  --color-lightPinkText: #A5088C;
+  --color-lightPinkStroke: #A5088C;
 
-  --color-lightTeal: '#719C9A';
-  --color-lightTealText: '#43605e';
-  --color-lightTealStroke: '#719C9A'
+  --color-lightTeal: #719C9A;
+  --color-lightTealText: #43605e;
+  --color-lightTealStroke: #719C9A;
 }
 
 body {
@@ -92,10 +92,10 @@ main {
     @apply absolute w-1.5 h-1.5 bg-[#C4C4C4] rounded-full top-1/2 transform -translate-y-1/2 left-5;
   }
 }
-
+/* 
 a, a:hover {
   color: var(--color-primary);
-}
+} */
 .prose p {
   margin-bottom: 2em;
 }

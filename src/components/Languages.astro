@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import EnglishLogo from '@/assets/languages/english.svg'
+import HindiLogo from '@/assets/languages/hindi.svg'
+---
+
+<div>
+  <h4 class="font-semibold text-lg tracking-wide mb-4">Spoken Languages</h4>
+  <div class="space-y-4 text-base">
+    <div class="flex items-center gap-3">
+      <Image width={180} height={180} src={EnglishLogo} class="block w-10 h-10 shrink-0" alt="English" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-md font-semibold tracking-wide">English</h4>
+        <p class="text-socialtext text-sm tracking-wide">Full Professional Profiency</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <Image width={180} height={180} src={HindiLogo} class="block w-10 h-10 shrink-0" alt="Hindi" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-md font-semibold tracking-wide">Hindi</h4>
+        <p class="text-socialtext text-sm tracking-wide">Native or bilingual proficiency</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <Image width={180} height={180} src={HindiLogo} class="block w-10 h-10 shrink-0" alt="Bengali" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-md font-semibold tracking-wide">Bengali</h4>
+        <p class="text-socialtext text-sm tracking-wide">Native or bilingual proficiency</p>
+      </div>
+    </div>
+  </div>
+</div>
