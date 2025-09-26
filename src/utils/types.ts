@@ -20,13 +20,17 @@ export const SkillMap: Record<string, SkillValue> = {
     link: 'https://reactnative.dev/',
     label: 'React Native',
   },
+  'react-hook-form': {
+    link: 'https://react-hook-form.com/',
+    label: 'React Hook Form',
+  },
+  'zod': {
+    link: 'https://zod.dev/',
+    label: 'Zod'
+  },
   'vue': {
     link: 'https://vuejs.org/',
     label: 'Vue.js'
-  },
-  'svelte': {
-    link: 'https://svelte.dev/',
-    label: 'Svelte'
   },
   'next': {
     link: 'https://nextjs.org/',
@@ -36,13 +40,21 @@ export const SkillMap: Record<string, SkillValue> = {
     link: 'https://www.gatsbyjs.com/',
     label: 'Gatsby'
   },
+  'astro': {
+    link: 'https://astro.build/',
+    label: 'Astro'
+  },
   'vite': {
     link: 'https://vite.dev/',
     label: 'Vite'
   },
   'redux': {
     link: 'https://redux.js.org/',
-    label: 'Redux'
+    label: 'Redux Toolkit'
+  },
+  'zustand': {
+    link: 'https://zustand.docs.pmnd.rs/',
+    label: 'Zustand'
   },
   'contextApi': {
     link: 'https://react.dev/learn/passing-data-deeply-with-context',
@@ -52,9 +64,13 @@ export const SkillMap: Record<string, SkillValue> = {
     link: 'http://tanstack.com/',
     label: 'TanStack'
   },
+  'react-query': {
+    link: 'http://tanstack.com/',
+    label: 'React Query'
+  },
   'wp': {
     link: 'https://wordpress.org/',
-    label: 'WordPress'
+    label: 'WordPress Development'
   },
   'jquery': {
     link: 'https://jquery.com/',
@@ -92,6 +108,14 @@ export const SkillMap: Record<string, SkillValue> = {
     link: 'https://jestjs.io/',
     label: 'Jest'
   },
+  'playwright': {
+    link: 'https://playwright.dev/',
+    label: 'Playwright'
+  },
+  'rtl': {
+    link: 'https://testing-library.com/docs/react-testing-library/intro/',
+    label: 'React Testing Library'
+  },
   'cypress': {
     link: 'https://www.cypress.io/',
     label: 'Cypress'
@@ -107,6 +131,26 @@ export const SkillMap: Record<string, SkillValue> = {
   'tailwind': {
     link: 'https://tailwindcss.com/',
     label: 'TailwindCSS'
+  },
+  'bootstrap': {
+    link: 'https://getbootstrap.com/',
+    label: 'Bootstrap'
+  },
+  'chakra': {
+    link: 'https://chakra-ui.com/',
+    label: 'Chakra UI'
+  },
+  'material-ui': {
+    link: 'https://mui.com/',
+    label: 'Material UI'
+  },
+  'shadcn': {
+    link: 'https://ui.shadcn.com/',
+    label: 'ShadCN UI'
+  },
+  'supabase': {
+    link: 'https://supabase.com/',
+    label: 'Supabase'
   },
   'laravel': {
     link: 'https://laravel.com/',

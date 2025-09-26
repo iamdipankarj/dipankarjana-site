@@ -2,7 +2,6 @@
 import '@/styles/global.css'
 import type { ImageMetadata } from 'astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
-import FallbackImage from '@/assets/blog-placeholder-1.jpg';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 
@@ -14,7 +13,27 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = FallbackImage } = Astro.props;
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image
+} = Astro.props;
+
+// Default OG image (public/fallback)
+const DEFAULT_OG = "https://dipankarjana.com/opengraph.png";
+
+// Resolve ogImage
+let ogImage: string;
+if (image) {
+  if (typeof image === "string") {
+    ogImage = image; // external string
+  } else {
+    ogImage = new URL(image.src, Astro.url).toString(); // local ImageMetadata
+  }
+} else {
+  ogImage = DEFAULT_OG; // fallback from public
+}
+
 ---
 <!doctype html>
 <html lang="en">
@@ -23,7 +42,6 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = FallbackImag
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- RSS -->
     <link
@@ -50,14 +68,15 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = FallbackImag
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image.src, Astro.url)} />
+    <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@iamdipankarj" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+    <meta property="twitter:image" content={ogImage} />
     <slot name="head" />
   </head>
   <body>

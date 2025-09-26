@@ -1,4 +1,5 @@
 ---
+import { SITE_DESCRIPTION } from '@/consts';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import HomeBanner from '@/components/HomeBanner.astro';
 import Job from '@/components/Job.astro';
@@ -13,9 +14,43 @@ import ToolsContainer from '@/components/ToolsContainer.astro';
 import Social from '@/components/Social.astro';
 import Languages from '@/components/Languages.astro';
 import Education from '@/components/Education.astro';
+
 ---
 
 <BaseLayout>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dipankar Jana",
+      "jobTitle": "Senior Software Engineer",
+      "url": "https://dipankarjana.com/",
+      "image": "https://dipankarjana.com/profile.png",
+      "email": "mailto:iamdipankarj@gmail.com",
+      "location": {
+        "@type": "Place",
+        "name": "India",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kolkata",
+          "addressRegion": "WB",
+          "addressCountry": "IN"
+        }
+      },
+      "sameAs": [
+        "https://x.com/iamdipankarj",
+        "https://www.linkedin.com/in/iamdipankarj",
+        "https://github.com/iamdipankarj"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "West Bengal University of Technology",
+        "sameAs": "https://www.wbut.ac.in/"
+      },
+      "knowsLanguage": ["en", "hi", "bn"],
+      "description": SITE_DESCRIPTION
+    })} />
+  </Fragment>
   <main>
     <HomeBanner />
     <h3 class="text-subheading mt-10 mb-6 text-base">Experience</h3>
@@ -32,6 +67,7 @@ import Education from '@/components/Education.astro';
           <Milestone>Led the migration of legacy codebases to modern frameworks like React, while leveraging <strong>HTML5</strong> and <strong>CSS3</strong> for improved performance and maintainability.</Milestone>
           <Milestone>Built several platform-related tools, such as an in-house component library and other utility libraries for <strong>React</strong> and <strong>React-Native</strong>.</Milestone>
           <Milestone>Have worked on building the base architecture for React apps, using plugins like <strong>Redux</strong>, <strong>Redux-observable</strong>, <strong>Redux-Saga</strong>, custom <strong>React hooks</strong>, and languages like <strong>TypeScript</strong>.</Milestone>
+          <Milestone>Worked with <strong>Canvas API</strong> to build an in-house image editor and features for implementing video KYC.</Milestone>
           <Milestone>Have worked on solidifying design language between multiple projects and used tools like <strong>styled components</strong>, <strong>CSS-in-JS</strong>, <strong>TailwindCSS</strong> to maintain consistency across applications when required.</Milestone>
           <Milestone>Implemented <strong>CI/CD</strong> pipelines using <strong>GitHub Actions</strong> to automate build, test, and deployment processes for our applications. Have used <strong>Jest</strong> to write unit tests for the same.</Milestone>
           <Milestone>Boosted user engagement by 30% by optimizing UI components and ensuring responsive design practices.</Milestone>
