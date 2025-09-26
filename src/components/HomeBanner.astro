@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
+import { Download } from '@lucide/astro';
 import ProfilePic from '@/assets/profile.png';
+
 const d1: number = new Date('05/01/2017').getTime()
 const d2: number = new Date().getTime()
 const diffTime = Math.abs(d2 - d1)
@@ -16,7 +18,8 @@ const experience = diffDays.toFixed(1)
     </div>
     <Image width={100} height={100} src={ProfilePic} class="hidden md:block rounded-full w-40 h-40" alt='Dipankar Jana' />
   </div>
-  <a href="/DipankarJanaResume.pdf" class="mt-8 bg-primary px-4 py-2 text-center text-sm font-semibold inline-block !text-white hover:text-white cursor-pointer transition duration-200 ease-in-out rounded-full hover:bg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 w-full md:w-auto">
+  <a href="/DipankarJanaResume.pdf" class="mt-8 bg-primary px-4 py-2 text-center text-sm font-semibold inline-flex items-center gap-2 !text-white hover:text-white cursor-pointer transition duration-200 ease-in-out rounded-full hover:bg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 w-full md:w-auto">
+    <Download class='w-4 h-4' />
     Download Resume
   </a>
 </section>
