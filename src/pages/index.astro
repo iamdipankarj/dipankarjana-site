@@ -1,10 +1,7 @@
 ---
 import Job from '@/components/Job.astro';
-import BaseHead from '@/components/BaseHead.astro';
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 import okcreditLogo from '@/assets/okcredit.svg';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const d1: number = new Date('05/01/2017').getTime()
 const d2: number = new Date().getTime()
@@ -14,28 +11,20 @@ const experience = diffDays.toFixed(1)
 
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1 class="font-bold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
-      <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
-      <p>Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
-      <section class="mt-4">
-        <h3 class="font-bold">Experience</h3>
-        <p>Being a self-taught developer, I've learned whatever was necessary to advance throughout my career. Here is my recent past:</p>
-        <Job heading='Senior Software Engineer' icon={okcreditLogo} />
-      </section>
-      <p>
-        Looking for a blog template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout>
+  <main>
+    <h1 class="font-bold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
+    <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
+    <p>Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
+    <section class="mt-4">
+      <h3 class="font-bold">Experience</h3>
+      <p>Being a self-taught developer, I've learned whatever was necessary to advance throughout my career. Here is my recent past:</p>
+      <Job heading='Senior Software Engineer' icon={okcreditLogo} />
+    </section>
+    <p>
+      Looking for a blog template with a bit more personality? Check out
+      <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
+      by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+    </p>
+  </main>
+</BaseLayout>
