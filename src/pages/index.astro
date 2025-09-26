@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import HomeBanner from '@/components/HomeBanner.astro';
-import OkCreditLogo from '@/assets/okcredit.svg';
 import Job from '@/components/Job.astro';
 import Milestone from '@/components/Milestone.astro';
+import ProjectsContainer from '@/components/ProjectsContainer.astro';
+import OkCreditLogo from '@/assets/companies/okcredit.svg';
+import HealofyLogo from '@/assets/companies/healofy.svg';
+import ClearfundsLogo from '@/assets/companies/clearfunds.svg';
 ---
 
 <BaseLayout>
@@ -26,7 +29,33 @@ import Milestone from '@/components/Milestone.astro';
           <Milestone>Have worked on solidifying design language between multiple projects and used tools like <strong>styled components</strong>, <strong>CSS-in-JS</strong>, <strong>TailwindCSS</strong> to maintain consistency across applications when required.</Milestone>
           <Milestone>Implemented <strong>CI/CD</strong> pipelines using <strong>GitHub Actions</strong> to automate build, test, and deployment processes for our applications. Have used <strong>Jest</strong> to write unit tests for the same.</Milestone>
           <Milestone>Boosted user engagement by 30% by optimizing UI components and ensuring responsive design practices.</Milestone>
-        </Experience>
+        </Job>
+        <Job
+          companyLogo={HealofyLogo}
+          companyName='Healofy'
+          position="Software Developer - Healofy"
+          duration="June 2018 — January 2021"
+        >
+          <p class="mb-4">The core application stack uses Google Cloud Platform for the backend and <strong>React.js</strong>, <strong>Next.js</strong> for the frontend.</p>
+          <Milestone>Used modern technologies such as SASS, ES6, and Webpack.</Milestone>
+          <Milestone>Increased operational efficiency by 25% by developing several internal tools and dashboards for the operations team.</Milestone>
+          <Milestone>Optimized the legacy webpages to reduce the <strong>page load time by 60%</strong>, enhancing user retention.</Milestone>
+          <Milestone>Enabled a <strong>20% user retention</strong> increase by implementing a new user onboarding process.</Milestone>
+        </Job>
+        <Job
+          companyLogo={ClearfundsLogo}
+          companyName='Clearfunds'
+          position="Front End Developer - Clearfunds"
+          duration="May 2017 — May 2018"
+        >
+          <p class="mb-4">Clearfunds was an online platform for buying and selling mutual funds.</p>
+          <Milestone>Increased investor fund allocation efficiency by 30% using Vue.js for Fund Finder's user-friendly frontend.</Milestone>
+          <Milestone>Enhanced backend efficiency by 40% through collaborating on Ruby on Rails integrations.</Milestone>
+          <Milestone><strong>Investor Dashboard</strong> - Created a dashboard that is used by investors, development required the use of <strong>Vue.js</strong> and <strong>Vue-Router</strong>.</Milestone>
+          <Milestone>Have built a <strong>Vue</strong> component library for investor dashboards.</Milestone>
+          <Milestone>Increased mobile user retention by 20% by designing responsive UI components.</Milestone>
+        </Job>
+        <ProjectsContainer />
       </div>
     </div>
   </main>

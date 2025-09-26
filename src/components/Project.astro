@@ -1,0 +1,45 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
+
+interface Props extends HTMLAttributes<'div'> {
+  thumbnail: ImageMetadata;
+  title: string;
+  demoLink: string;
+  githubLink?: string;
+  description: string;
+}
+
+const {
+  thumbnail,
+  title,
+  demoLink,
+  githubLink,
+  description,
+  ...props
+} = Astro.props;
+
+const hasGithubLink = !!githubLink;
+
+---
+<div class="flex flex-col rounded-lg bg-white md:flex-row text-surface" {...props}>
+  <Image width={180} height={180} src={thumbnail} class="h-48 w-full rounded-lg object-cover md:h-auto md:w-48" alt={title} />
+  <div class="flex flex-col justify-start md:px-6 py-6">
+    <h5 class="mb-2 text-xl font-medium">
+      {title}
+    </h5>
+    <p class="mb-4 text-base">
+      {description}
+    </p>
+    <div class="flex space-x-4">
+    <a href={demoLink} target="_blank" class="text-sm text-surface/75 underline text-lightPurpleText">
+        View Demo
+      </a>
+      {hasGithubLink ? (
+        <a href={githubLink} target="_blank" class="text-sm text-surface/75 underline text-lightPurpleText">
+          View on Github
+        </a>
+      ) : null}
+    </div>
+  </div>
+</div>
