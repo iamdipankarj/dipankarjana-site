@@ -1,11 +1,33 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import HomeBanner from '@/components/HomeBanner.astro';
-
+import OkCreditLogo from '@/assets/okcredit.svg';
+import Job from '@/components/Job.astro';
+import Milestone from '@/components/Milestone.astro';
 ---
 
 <BaseLayout>
   <main>
     <HomeBanner />
+    <h3 class="text-subheading mt-10 mb-6">Experience</h3>
+    <div class="flex pb-10 flex-col md:flex-row">
+      <div class="space-y-6 w-full shrink-0 grow-1 pb-10 md:pb-0 md:w-3/4 md:pr-16">
+        <Job
+          companyLogo={OkCreditLogo}
+          companyName='OkCredit'
+          position="Senior Software Engineer - OkCredit"
+          duration="January 2021 — Present"
+        >
+          <p class="mb-4">Led a team of engineers in the development and designers of new and upcoming products.</p>
+          <Milestone>Built the end-to-end frontend for the Loan platform, enabling <strong>$50 Million+</strong> in disbursal at scale.</Milestone>
+          <Milestone>Led the migration of legacy codebases to modern frameworks like React, while leveraging <strong>HTML5</strong> and <strong>CSS3</strong> for improved performance and maintainability.</Milestone>
+          <Milestone>Built several platform-related tools, such as an in-house component library and other utility libraries for <strong>React</strong> and <strong>React-Native</strong>.</Milestone>
+          <Milestone>Have worked on building the base architecture for React apps, using plugins like <strong>Redux</strong>, <strong>Redux-observable</strong>, <strong>Redux-Saga</strong>, custom <strong>React hooks</strong>, and languages like <strong>TypeScript</strong>.</Milestone>
+          <Milestone>Have worked on solidifying design language between multiple projects and used tools like <strong>styled components</strong>, <strong>CSS-in-JS</strong>, <strong>TailwindCSS</strong> to maintain consistency across applications when required.</Milestone>
+          <Milestone>Implemented <strong>CI/CD</strong> pipelines using <strong>GitHub Actions</strong> to automate build, test, and deployment processes for our applications. Have used <strong>Jest</strong> to write unit tests for the same.</Milestone>
+          <Milestone>Boosted user engagement by 30% by optimizing UI components and ensuring responsive design practices.</Milestone>
+        </Experience>
+      </div>
+    </div>
   </main>
 </BaseLayout>
