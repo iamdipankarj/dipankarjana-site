@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import TwitterLogo from '@/assets/social/twitter.svg'
+import LinkedInLogo from '@/assets/social/linkedin.svg'
+import GithubLogo from '@/assets/social/github.svg'
+---
+
+<div>
+  <h4 class="font-semibold text-lg tracking-wide mb-4">Social</h4>
+  <div class="space-y-4 text-base">
+    <a class="flex items-center gap-3" href="https://x.com/iamdipankarj" rel="nofollow" target="_blank">
+      <Image width={180} height={180} src={TwitterLogo} class="block w-10 h-10 shrink-0" alt="Twitter / X" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-sm tracking-wide text-social">Twitter / X</h4>
+        <p class="text-socialText font-semibold tracking-wide hover:underline">@iamdipankarj</p>
+      </div>
+    </a>
+    <a class="flex items-center gap-3" href="https://www.linkedin.com/in/iamdipankarj" rel="nofollow" target="_blank">
+      <Image width={180} height={180} src={LinkedInLogo} class="block w-10 h-10 shrink-0" alt="LinkedIn" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-sm tracking-wide text-social">LinkedIn</h4>
+        <p class="text-socialText font-semibold tracking-wide hover:underline">@iamdipankarj</p>
+      </div>
+    </a>
+    <a class="flex items-center gap-3" href="https://github.com/iamdipankarj" rel="nofollow" target="_blank">
+      <Image width={180} height={180} src={GithubLogo} class="block w-10 h-10 shrink-0" alt="Github" />
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-sm tracking-wide text-social">Github</h4>
+        <p class="text-socialText font-semibold tracking-wide hover:underline">@iamdipankarj</p>
+      </div>
+    </a>
+  </div>
+</div>

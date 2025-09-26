@@ -3,21 +3,33 @@ import type { ImageMetadata } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
 
-interface Props extends HTMLAttributes<'div'> {
-  icon: ImageMetadata;
-  heading: string
+interface Props extends HTMLAttributes<'article'> {
+  companyLogo: ImageMetadata;
+  companyName: string
+  position: string
+  duration: string
 }
 
-const { heading, icon, ...props } = Astro.props;
+const {
+  companyLogo,
+  companyName,
+  position,
+  duration,
+  ...props
+} = Astro.props;
 ---
 
-<div class="flex gap-2 my-2" {...props}>
-  <div class="icon"><Image width={180} height={180} src={icon} alt="" /></div>
-  
-  <div>
-    <h3 class="font-semibold">{heading}</h3>
-    <small class="block text-lg my-0.5 opacity-70">Since September 2018</small>
-    <p>Led a team of engineers in the development and designers of new and upcoming products.</p>
-    <p><strong>Most important thing I've learned here:</strong> how to lead a team, mentor individuals for growth and work on a complex company-wide design system.</p>
+<article class="text-base" {...props}>
+  <div class="flex items-center">
+    <div class="w-16 shrink-0">
+      <Image width={180} height={180} src={companyLogo} class="block w-12 h-12" alt={companyName} />
+    </div>
+    <div class="flex flex-col flex-1">
+      <h4 class="font-semibold text-lg tracking-wide">{position}</h4>
+      <p class="text-subheading text-md">{duration}</p>
+    </div>
   </div>
-</div>
+  <ul class="space-y-1 mt-4">
+    <slot />
+  </ul>
+</article>

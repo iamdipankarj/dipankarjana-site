@@ -1,41 +1,112 @@
 ---
+import { SITE_DESCRIPTION } from '@/consts';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import HomeBanner from '@/components/HomeBanner.astro';
 import Job from '@/components/Job.astro';
-import BaseHead from '@/components/BaseHead.astro';
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
-import okcreditLogo from '@/assets/okcredit.svg';
-
-const d1: number = new Date('05/01/2017').getTime()
-const d2: number = new Date().getTime()
-const diffTime = Math.abs(d2 - d1)
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) / 365
-const experience = diffDays.toFixed(1)
+import Milestone from '@/components/Milestone.astro';
+import ProjectsContainer from '@/components/ProjectsContainer.astro';
+import OkCreditLogo from '@/assets/companies/okcredit.svg';
+import HealofyLogo from '@/assets/companies/healofy.svg';
+import ClearfundsLogo from '@/assets/companies/clearfunds.svg';
+import Contact from '@/components/Contact.astro';
+import SkillsContainer from '@/components/SkillsContainer.astro';
+import ToolsContainer from '@/components/ToolsContainer.astro';
+import Social from '@/components/Social.astro';
+import Languages from '@/components/Languages.astro';
+import Education from '@/components/Education.astro';
 
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1 class="font-bold">🧑‍🚀 Hey, I'm Dipankar Jana</h1>
-      <p>Detail-oriented Frontend Engineer with <strong>{experience}</strong> years of experience building responsive, high-performance web applications using <strong>React</strong>, <strong>TypeScript</strong>, and modern <strong>JavaScript</strong> frameworks.</p>
-      <p>Proven track record of delivering scalable UI solutions, collaborating cross-functionally with design and backend teams, and optimizing user experiences across devices. Passionate about clean code, accessibility, and continuously improving frontend architecture.</p>
-      <section class="mt-4">
-        <h3 class="font-bold">Experience</h3>
-        <p>Being a self-taught developer, I've learned whatever was necessary to advance throughout my career. Here is my recent past:</p>
-        <Job heading='Senior Software Engineer' icon={okcreditLogo} />
-      </section>
-      <p>
-        Looking for a blog template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dipankar Jana",
+      "jobTitle": "Senior Software Engineer",
+      "url": "https://dipankarjana.com/",
+      "image": "https://dipankarjana.com/profile.png",
+      "email": "mailto:iamdipankarj@gmail.com",
+      "location": {
+        "@type": "Place",
+        "name": "India",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kolkata",
+          "addressRegion": "WB",
+          "addressCountry": "IN"
+        }
+      },
+      "sameAs": [
+        "https://x.com/iamdipankarj",
+        "https://www.linkedin.com/in/iamdipankarj",
+        "https://github.com/iamdipankarj"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "West Bengal University of Technology",
+        "sameAs": "https://www.wbut.ac.in/"
+      },
+      "knowsLanguage": ["en", "hi", "bn"],
+      "description": SITE_DESCRIPTION
+    })} />
+  </Fragment>
+  <main>
+    <HomeBanner />
+    <h3 class="text-subheading mt-10 mb-6 text-base">Experience</h3>
+    <div class="flex pb-10 flex-col md:flex-row">
+      <div class="space-y-6 w-full shrink-0 grow-1 pb-10 md:pb-0 md:w-3/4 md:pr-16">
+        <Job
+          companyLogo={OkCreditLogo}
+          companyName='OkCredit'
+          position="Senior Software Engineer - OkCredit"
+          duration="January 2021 — Present"
+        >
+          <p class="mb-4">Led a team of engineers in the development and designers of new and upcoming products.</p>
+          <Milestone>Built the end-to-end frontend for the Loan platform, enabling <strong>$50 Million+</strong> in disbursal at scale.</Milestone>
+          <Milestone>Led the migration of legacy codebases to modern frameworks like React, while leveraging <strong>HTML5</strong> and <strong>CSS3</strong> for improved performance and maintainability.</Milestone>
+          <Milestone>Built several platform-related tools, such as an in-house component library and other utility libraries for <strong>React</strong> and <strong>React-Native</strong>.</Milestone>
+          <Milestone>Have worked on building the base architecture for React apps, using plugins like <strong>Redux</strong>, <strong>Redux-observable</strong>, <strong>Redux-Saga</strong>, custom <strong>React hooks</strong>, and languages like <strong>TypeScript</strong>.</Milestone>
+          <Milestone>Worked with <strong>Canvas API</strong> to build an in-house image editor and features for implementing video KYC.</Milestone>
+          <Milestone>Have worked on solidifying design language between multiple projects and used tools like <strong>styled components</strong>, <strong>CSS-in-JS</strong>, <strong>TailwindCSS</strong> to maintain consistency across applications when required.</Milestone>
+          <Milestone>Implemented <strong>CI/CD</strong> pipelines using <strong>GitHub Actions</strong> to automate build, test, and deployment processes for our applications. Have used <strong>Jest</strong> to write unit tests for the same.</Milestone>
+          <Milestone>Boosted user engagement by 30% by optimizing UI components and ensuring responsive design practices.</Milestone>
+        </Job>
+        <Job
+          companyLogo={HealofyLogo}
+          companyName='Healofy'
+          position="Software Developer - Healofy"
+          duration="June 2018 — January 2021"
+        >
+          <p class="mb-4">The core application stack uses Google Cloud Platform for the backend and <strong>React.js</strong>, <strong>Next.js</strong> for the frontend.</p>
+          <Milestone>Used modern technologies such as SASS, ES6, and Webpack.</Milestone>
+          <Milestone>Increased operational efficiency by 25% by developing several internal tools and dashboards for the operations team.</Milestone>
+          <Milestone>Optimized the legacy webpages to reduce the <strong>page load time by 60%</strong>, enhancing user retention.</Milestone>
+          <Milestone>Enabled a <strong>20% user retention</strong> increase by implementing a new user onboarding process.</Milestone>
+        </Job>
+        <Job
+          companyLogo={ClearfundsLogo}
+          companyName='Clearfunds'
+          position="Front End Developer - Clearfunds"
+          duration="May 2017 — May 2018"
+        >
+          <p class="mb-4">Clearfunds was an online platform for buying and selling mutual funds.</p>
+          <Milestone>Increased investor fund allocation efficiency by 30% using Vue.js for Fund Finder's user-friendly frontend.</Milestone>
+          <Milestone>Enhanced backend efficiency by 40% through collaborating on Ruby on Rails integrations.</Milestone>
+          <Milestone><strong>Investor Dashboard</strong> - Created a dashboard that is used by investors, development required the use of <strong>Vue.js</strong> and <strong>Vue-Router</strong>.</Milestone>
+          <Milestone>Have built a <strong>Vue</strong> component library for investor dashboards.</Milestone>
+          <Milestone>Increased mobile user retention by 20% by designing responsive UI components.</Milestone>
+        </Job>
+        <ProjectsContainer />
+      </div>
+      <aside class="shrink-0 space-y-8 w-full md:w-1/4">
+        <Contact />
+        <SkillsContainer />
+        <ToolsContainer />
+        <Social />
+        <Languages />
+        <Education />
+      </aside>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import EmailIcon from '@/assets/contact/email.svg'
+import LinkIcon from '@/assets/contact/website.svg'
+import LinkedInIcon from '@/assets/contact/linkedin-alt.svg'
+import PhoneIcon from '@/assets/contact/phone.svg'
+import LocationIcon from '@/assets/contact/location.svg'
+---
+
+<div>
+  <h4 class="font-semibold text-lg tracking-wide mb-4">Contact</h4>
+  <div class="space-y-4">
+    <a class="flex items-center gap-3" href="mailto:iamdipankarj@gmail.com" rel="nofollow" target="_blank">
+      <div class="w-10 h-10 bg-socialIcon rounded-full flex items-center justify-center shrink-0">
+        <Image width={100} height={100} src={EmailIcon} class="block w-6 h-6 shrink-0" alt='Email' />
+      </div>
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-base tracking-wide text-social">Email</h4>
+        <p class="text-socialText text-sm font-semibold tracking-wide hover:underline">iamdipankarj@gmail.com</p>
+      </div>
+    </a>
+    <a class="flex items-center gap-3" href="https://dipankarjana.com" rel="nofollow" target="_blank">
+      <div class="w-10 h-10 bg-socialIcon rounded-full flex items-center justify-center shrink-0">
+        <Image width={100} height={100} src={LinkIcon} class="block w-6 h-6 shrink-0" alt='Website' />
+      </div>
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-base tracking-wide text-social">Website</h4>
+        <p class="text-socialText text-sm font-semibold tracking-wide hover:underline">https://dipankarjana.com</p>
+      </div>
+    </a>
+    <a class="flex items-center gap-3" href="https://linkedin.com/in/iamdipankarj" rel="nofollow" target="_blank">
+      <div class="w-10 h-10 bg-socialIcon rounded-full flex items-center justify-center shrink-0">
+        <Image width={100} height={100} src={LinkedInIcon} class="block w-4 h-4 shrink-0" alt='LinkedIn' />
+      </div>
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-base tracking-wide text-social">LinkedIn</h4>
+        <p class="text-socialText text-sm font-semibold tracking-wide hover:underline">https://linkedin.com/in/iamdipankarj</p>
+      </div>
+    </a>
+    <a class="flex items-center gap-3" href="tel:9674878096" rel="nofollow" target="_blank">
+      <div class="w-10 h-10 bg-socialIcon rounded-full flex items-center justify-center shrink-0">
+        <Image width={100} height={100} src={PhoneIcon} class="block w-6 h-6 shrink-0" alt='Phone' />
+      </div>
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-base tracking-wide text-social">Phone</h4>
+        <p class="text-socialText text-sm font-semibold tracking-wide hover:underline">(+91) 9674878096</p>
+      </div>
+    </a>
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-socialIcon rounded-full flex items-center justify-center shrink-0">
+        <Image width={100} height={100} src={LocationIcon} class="block w-6 h-6 shrink-0" alt='Location' />
+      </div>
+      <div class="flex flex-col flex-1 gap-1">
+        <h4 class="text-base tracking-wide text-social">Location</h4>
+        <p class="text-socialText text-sm font-semibold tracking-wide">India</p>
+      </div>
+    </div>
+  </div>
+</div>

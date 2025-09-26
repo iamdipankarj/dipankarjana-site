@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { SkillMap, type Skill } from "@/utils/types";
+
+interface Props extends HTMLAttributes<'a'> {
+  skill: Skill;
+}
+
+const {
+  skill,
+  class: className,
+  ...props
+} = Astro.props;
+
+const mappedSkill = SkillMap[skill]
+const label = mappedSkill.label
+const link = mappedSkill.link
+
+---
+
+<a href={link} class:list={['inline-flex items-center rounded-xl font-semibold px-2 py-1 text-sm whitespace-nowrap select-none border hover:text-inherit', className]} rel="nofollow" target="_blank" {...props}>
+  <slot name="icon" />
+  {label}
+</a>
