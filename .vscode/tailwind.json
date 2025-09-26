@@ -2,6 +2,16 @@
     "version": 1.1,
     "atDirectives": [
       {
+        "name": "@theme",
+        "description": "Use the `@theme` directive to define your theme colors and styles.",
+        "references": [
+          {
+            "name": "Tailwind Documentation",
+            "url": "https://tailwindcss.com/docs/functions-and-directives#theme"
+          }
+        ]
+      },
+      {
         "name": "@tailwind",
         "description": "Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilities` and `screens` styles into your CSS.",
         "references": [
