@@ -6,6 +6,7 @@ import Job from '@/components/Job.astro';
 import Milestone from '@/components/Milestone.astro';
 import ProjectsContainer from '@/components/ProjectsContainer.astro';
 import OkCreditLogo from '@/assets/companies/okcredit.svg';
+import TechnomileLogo from '@/assets/companies/technomile.jpg';
 import HealofyLogo from '@/assets/companies/healofy.svg';
 import ClearfundsLogo from '@/assets/companies/clearfunds.svg';
 import Contact from '@/components/Contact.astro';
@@ -56,6 +57,16 @@ import Education from '@/components/Education.astro';
     <h3 class="text-subheading mt-10 mb-6 text-base">Experience</h3>
     <div class="flex pb-10 flex-col md:flex-row">
       <div class="space-y-6 w-full shrink-0 grow-1 pb-10 md:pb-0 md:w-3/4 md:pr-16">
+        <Job
+          companyLogo={TechnomileLogo}
+          companyName='Technomile'
+          position="Senior Software Engineer - Technomile"
+          duration="October 2025 — Present"
+        >
+          <Fragment slot='excerpt'>
+            <p class="mt-4">Worked with the frontend team to lead various engineering initiatives.</p>
+          </Fragment>
+        </Job>
         <Job
           companyLogo={OkCreditLogo}
           companyName='OkCredit'
